@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="dark" style="--background: rgba(0, 0, 0, 0.7);">
+    <ion-title>TIKET</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://i1.sndcdn.com/artworks-4sr811z0luvzvuDj-7vqFVQ-t500x500.jpg') center/cover no-repeat fixed;">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="chevron-down-circle-outline"
+      pullingText="Tarik untuk refresh"
+      refreshingSpinner="lines"
+      refreshingText="Memperbarui...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card *ngFor="let alumni1 of alumnis" style="--background: rgba(255, 255, 255, 0.8);">
+    <div class="image-container">
+      <img [src]="getTicketImage(alumni1.tiket)" alt="Concert Image"/>
+    </div>
+    
+    <div class="tiket-badge" [class.vip]="alumni1.tiket === 'VIP'" 
+         [class.reguler]="alumni1.tiket === 'REGULER'">
+      {{alumni1.tiket}}
+    </div>
+    
+    <ion-card-header>
+      <ion-card-subtitle style="color: #333;">
+        No. Tiket: #{{alumni1.displayNumber}}
+      </ion-card-subtitle>
+      <ion-card-title style="color: #000;">{{alumni1.nama}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content style="color: #333;">
+      <p>
+        <ion-icon name="call-outline"></ion-icon>
+        {{alumni1.nohp}}
+      </p>
+      <p>
+        <ion-icon name="mail-outline"></ion-icon>
+        {{alumni1.email}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

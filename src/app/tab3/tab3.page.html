@@ -1,0 +1,122 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark" style="--background: rgba(0, 0, 0, 0.8);">
+    <ion-title>
+      <ion-text class="info-title">
+        <ion-icon name="information-circle"></ion-icon>
+        INFORMASI TIKET
+      </ion-text>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://i1.sndcdn.com/artworks-4sr811z0luvzvuDj-7vqFVQ-t500x500.jpg') center/cover no-repeat fixed;">
+  
+  <!-- VIP Section -->
+  <ion-card class="info-card vip-card">
+    <ion-card-header>
+      <ion-card-title>
+        <ion-icon name="star"></ion-icon>
+        TIKET VIP
+      </ion-card-title>
+      <ion-card-subtitle>Rp. 500.000</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <h2>Benefit yang didapatkan:</h2>
+      <ion-list>
+        <ion-item lines="none">
+          <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+          <ion-label>Area khusus VIP di depan panggung</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+          <ion-label>Meet & Greet dengan artis</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+          <ion-label>Merchandise exclusive konser</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+          <ion-label>Snack dan minuman gratis</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+          <ion-label>Foto bersama artis</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Regular Section -->
+  <ion-card class="info-card regular-card">
+    <ion-card-header>
+      <ion-card-title>
+        <ion-icon name="ticket"></ion-icon>
+        TIKET REGULER
+      </ion-card-title>
+      <ion-card-subtitle>Rp. 300.000</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <h2>Benefit yang didapatkan:</h2>
+      <ion-list>
+        <ion-item lines="none">
+          <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+          <ion-label>Area reguler dengan view yang baik</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+          <ion-label>Merchandise standar konser</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+          <ion-label>Air mineral gratis</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Additional Info -->
+  <ion-card class="info-card notice-card">
+    <ion-card-header>
+      <ion-card-title>
+        <ion-icon name="alert-circle"></ion-icon>
+        INFORMASI PENTING
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item lines="none">
+          <ion-icon name="time" slot="start"></ion-icon>
+          <ion-label>
+            <h3>Waktu Konser</h3>
+            <p>19:00 WIB - Selesai</p>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="location" slot="start"></ion-icon>
+          <ion-label>
+            <h3>Lokasi</h3>
+            <p>Gedung Serbaguna UNUJA</p>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon name="calendar" slot="start"></ion-icon>
+          <ion-label>
+            <h3>Tanggal</h3>
+            <p>31 Desember 2024</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      <div class="notice-text">
+        <p><ion-icon name="warning"></ion-icon> Harap membawa tiket dan identitas yang valid</p>
+        <p><ion-icon name="warning"></ion-icon> Dilarang membawa makanan dan minuman dari luar</p>
+        <p><ion-icon name="warning"></ion-icon> Pintu masuk dibuka 2 jam sebelum acara</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

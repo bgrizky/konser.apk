@@ -1,0 +1,152 @@
+<ion-header>
+  <ion-toolbar color="dark" style="--background: rgba(0, 0, 0, 0.8);">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-text style="font-family: 'Rock Salt', cursive;">PEMESANAN TIKET</ion-text>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://i1.sndcdn.com/artworks-4sr811z0luvzvuDj-7vqFVQ-t500x500.jpg') center/cover no-repeat fixed;">
+  <ion-card class="ticket-card">
+    <ion-card-header>
+      <ion-card-title class="concert-title">
+        <ion-icon name="musical-notes"></ion-icon>
+        PEMESANAN TIKET KONSER
+      </ion-card-title>
+    </ion-card-header>
+  
+    <div class="ticket-info">
+      <ion-icon name="information-circle"></ion-icon>
+      <p>Silakan lengkapi data diri Anda untuk pemesanan tiket konser</p>
+    </div>
+
+    <ion-list class="form-list">
+      <ion-item class="form-item">
+        <ion-label position="floating">
+          <ion-icon name="person"></ion-icon>
+          NAMA LENGKAP
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="nama" placeholder="Masukkan nama lengkap"></ion-input>
+      </ion-item>
+
+      <ion-item class="form-item">
+        <ion-label position="floating">
+          <ion-icon name="call"></ion-icon>
+          NOMOR HP/WA
+        </ion-label>
+        <ion-input type="tel" [(ngModel)]="nohp" placeholder="Contoh: 08xxxxxxxxxx"></ion-input>
+      </ion-item>
+
+      <ion-item class="form-item">
+        <ion-label position="floating">
+          <ion-icon name="mail"></ion-icon>
+          EMAIL
+        </ion-label>
+        <ion-input type="email" [(ngModel)]="email" placeholder="contoh@email.com"></ion-input>
+      </ion-item>
+      
+      <ion-item class="form-item">
+        <ion-label position="floating">
+          <ion-icon name="ticket"></ion-icon>
+          STATUS TIKET
+        </ion-label>
+        <ion-select [(ngModel)]="tiket" placeholder="PILIH STATUS TIKET" interface="action-sheet">
+          <ion-select-option value="VIP">VIP - PREMIUM EXPERIENCE</ion-select-option>
+          <ion-select-option value="REGULER">REGULER - STANDARD ACCESS</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <div class="button-container">
+      <ion-button expand="block" class="order-button" (click)="addRegister()">
+        <ion-icon name="musical-notes"></ion-icon>
+        PESAN TIKET SEKARANG
+      </ion-button>
+    </div>
+  
+  </ion-card>
+
+  <!-- Additional Information Cards -->
+  <ion-card class="info-card">
+    <ion-card-header>
+      <ion-card-title class="info-title">
+        <ion-icon name="calendar"></ion-icon>
+        JADWAL & LOKASI
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="info-item">
+        <ion-icon name="time-outline"></ion-icon>
+        <div class="info-text">
+          <h3>Waktu Konser</h3>
+          <p>19:00 WIB - Selesai</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <ion-icon name="location-outline"></ion-icon>
+        <div class="info-text">
+          <h3>Lokasi</h3>
+          <p>Gedung Serbaguna USU</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <div class="info-text">
+          <h3>Tanggal</h3>
+          <p>31 Desember 2024</p>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="info-card benefit-card">
+    <ion-card-header>
+      <ion-card-title class="info-title">
+        <ion-icon name="star"></ion-icon>
+        BENEFIT TIKET
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="benefit-section vip">
+        <h3>
+          <ion-icon name="diamond-outline"></ion-icon>
+          VIP - Rp 500.000
+        </h3>
+        <ul>
+          <li><ion-icon name="checkmark-circle"></ion-icon> Area khusus VIP di depan panggung</li>
+          <li><ion-icon name="checkmark-circle"></ion-icon> Meet & Greet dengan artis</li>
+          <li><ion-icon name="checkmark-circle"></ion-icon> Merchandise exclusive konser</li>
+          <li><ion-icon name="checkmark-circle"></ion-icon> Snack dan minuman gratis</li>
+          <li><ion-icon name="checkmark-circle"></ion-icon> Foto bersama artis</li>
+        </ul>
+      </div>
+
+      <div class="benefit-section regular">
+        <h3>
+          <ion-icon name="ticket-outline"></ion-icon>
+          REGULER - Rp 300.000
+        </h3>
+        <ul>
+          <li><ion-icon name="checkmark-circle"></ion-icon> Area reguler dengan view yang baik</li>
+          <li><ion-icon name="checkmark-circle"></ion-icon> Merchandise standar konser</li>
+          <li><ion-icon name="checkmark-circle"></ion-icon> Air mineral gratis</li>
+        </ul>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+
+
+
+
+
+

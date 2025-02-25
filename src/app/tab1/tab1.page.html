@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="dark" style="--background: rgba(0, 0, 0, 0.8);">
+    <ion-title>
+      <ion-text class="concert-title">
+        <ion-icon name="musical-notes"></ion-icon>
+        KONSER MUSIK
+      </ion-text>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://i1.sndcdn.com/artworks-4sr811z0luvzvuDj-7vqFVQ-t500x500.jpg') center/cover no-repeat fixed;">
+  <ion-card class="header-card">
+    <div class="ion-text-center">
+      <ion-card-header>
+        <ion-card-title class="main-title">
+          <ion-icon name="star"></ion-icon>
+          UPCOMING CONCERTS
+        </ion-card-title>
+        <ion-card-subtitle class="subtitle">Pilih konser favoritmu sekarang!</ion-card-subtitle>
+      </ion-card-header>
+    </div>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-sm="6" size-md="4" size-lg="3" *ngFor="let concert of concerts">
+        <ion-card class="concert-card">
+          <div class="image-container">
+            <img [src]="concert.image" [alt]="concert.title"/>
+            <div class="overlay">
+              <ion-chip color="warning" class="status-chip">
+                <ion-icon name="time-outline"></ion-icon>
+                <ion-label>Coming Soon</ion-label>
+              </ion-chip>
+            </div>
+          </div>
+          
+          <ion-card-header>
+            <ion-card-title>{{concert.title}}</ion-card-title>
+            <ion-card-subtitle class="price">
+              <ion-icon name="ticket-outline"></ion-icon>
+              Rp {{concert.price}}
+            </ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-button expand="block" class="ticket-button" (click)="navigateToTab2()">
+              <ion-icon name="cart-outline" slot="start"></ion-icon>
+              Beli Tiket
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

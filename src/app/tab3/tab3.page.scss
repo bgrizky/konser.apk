@@ -1,0 +1,148 @@
+/* Title Styling */
+.info-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  ion-icon {
+    margin-right: 8px;
+    font-size: 1.2em;
+  }
+}
+
+/* Card Styling */
+.info-card {
+  margin: 16px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  
+  ion-card-header {
+    background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+    border-radius: 15px 15px 0 0;
+    padding: 16px;
+    
+    ion-card-title {
+      color: #fff;
+      font-size: 1.4em;
+      display: flex;
+      align-items: center;
+      
+      ion-icon {
+        margin-right: 8px;
+        font-size: 1.2em;
+      }
+    }
+    
+    ion-card-subtitle {
+      color: #ffd700;
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+  }
+}
+
+/* VIP Card Specific */
+.vip-card {
+  ion-item {
+    --background: transparent;
+    
+    ion-icon {
+      color: #ffd700;
+    }
+  }
+}
+
+/* Regular Card Specific */
+.regular-card {
+  ion-item {
+    --background: transparent;
+    
+    ion-icon {
+      color: var(--ion-color-primary);
+    }
+  }
+}
+
+/* Notice Card */
+.notice-card {
+  ion-item {
+    --background: transparent;
+    margin-bottom: 8px;
+    
+    ion-icon {
+      color: var(--ion-color-primary);
+      font-size: 1.2em;
+    }
+    
+    h3 {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    
+    p {
+      color: #666;
+    }
+  }
+}
+
+.notice-text {
+  margin-top: 16px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  
+  p {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    color: #666;
+    
+    ion-icon {
+      color: #ff9800;
+      margin-right: 8px;
+      font-size: 1.2em;
+    }
+  }
+}
+
+/* List Styling */
+ion-list {
+  background: transparent;
+  padding: 8px;
+  
+  ion-item {
+    --padding-start: 0;
+    --inner-padding-end: 0;
+    --background: transparent;
+    
+    ion-label {
+      margin: 8px 0;
+      color: #333;
+    }
+  }
+}
+
+/* Animation */
+.info-card {
+  animation: slideUp 0.5s ease-out;
+  animation-fill-mode: both;
+  
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.2}s;
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
